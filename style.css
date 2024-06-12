@@ -1,0 +1,44 @@
+:root{
+    --button-width: 100%;
+    --button-height: 100%;
+    --button-top: 0px;
+
+    --img-width: 300px;
+    --img-height: 300px;
+    --img-top: 0px;
+
+    --h1-width: 100%;
+    --h1-top: 0px;
+}
+
+h1{
+    text-align: center;
+    width: var(--h1-width);
+    top: 0px;
+    left: 0px;
+}
+
+body{
+    background-color: rgb(88, 88, 88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    position: absolute;
+    width: var(--button-width);
+    height: var(--button-height);
+    top: var(--button-top);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+img{
+    background-color: transparent;
+    border-color: transparent;
+    outline-color: transparent;
+    width: var(--img-width);
+    height: var(--img-height);
+}
