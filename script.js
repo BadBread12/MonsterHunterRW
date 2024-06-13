@@ -3,10 +3,10 @@ const elements = '/Elemente.png';
 const status_elements = '/Status-Effekte.png';
 const emptyPNG = '/Empty.png';
 
-const weapons = [];
-const weaponNames = [];
+//const weapons = [];
+//const weaponNames = [];
 
-weapons = [
+let weapons = [
     ['/GS_ICON.png', 'Great-Sword'],
     ['/LS_ICON.png', 'Long-Sword'],
     ['/SNS_ICON.png', 'Sword and Shield'],
@@ -32,7 +32,7 @@ console.log(weapons.length+" Weapons found");
 let randomWeaponInt = getRandomInt(weapons.length-1);
 let targetWeapon = directory+weapons[randomWeaponInt][0];
 let targetElement = '';
-let targetWeaponName = weaponNames[randomWeaponInt][1];
+let targetWeaponName = weapons[randomWeaponInt][1];
 
 // Zugriff auf das Bild-Element über die ID 'img'
 const weaponElement = document.getElementById('Weapon');
@@ -49,7 +49,7 @@ imgElement.src = targetWeapon;
 function changeImage() {
     randomWeaponInt = getRandomInt(weapons.length-1);
     targetWeapon = directory+weapons[randomWeaponInt][0];
-    targetWeaponName = weaponNames[randomWeaponInt][1];
+    targetWeaponName = weapons[randomWeaponInt][1];
 
     let hasElement = hasElementalDamage();
 
